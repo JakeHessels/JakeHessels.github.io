@@ -3361,36 +3361,37 @@ input, select, textarea {
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer; /* Show it's hoverable */
 }
 
-#header .header-hover-group h1 {
-    position: relative;
-    margin: 0; /* Remove default margin */
+.header-hover-group h1 {
+    position: relative !important;
+    margin: 0 !important;
+    min-height: 1em; /* Prevent layout shift */
 }
 
-#header .header-hover-group h1 .hover-text,
-#header .header-hover-group h1 .default-text {
-    transition: opacity 0.3s ease;
-    display: block; /* Make sure they're block level */
+.header-hover-group h1 .default-text,
+.header-hover-group h1 .hover-text {
+    transition: opacity 0.3s ease !important;
 }
 
-#header .header-hover-group h1 .hover-text {
+.header-hover-group h1 .hover-text {
     opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ensure full width */
+    pointer-events: none; /* Don't block hover on parent */
 }
 
-#header .header-hover-group h1 .default-text {
+.header-hover-group h1 .default-text {
     opacity: 1;
 }
 
 /* When hovering over the group, swap the text */
 .header-hover-group:hover h1 .default-text {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .header-hover-group:hover h1 .hover-text {
-    opacity: 1;
+    opacity: 1 !important;
 }
