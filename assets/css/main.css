@@ -3333,7 +3333,6 @@ input, select, textarea {
 /* =========================
    Custom Pixel Art Logo
    ========================= */
-
 .pixel-logo-sprite {
     display: inline-block;
     width: 64px;
@@ -3354,3 +3353,33 @@ input, select, textarea {
     background-position: -64px 0;
 }
 
+/* Also change sprite when hovering anywhere in the group */
+.header-hover-group:hover .pixel-logo-sprite {
+    background-position: -64px 0;
+}
+
+/* =========================
+   editing the header text next to the pixel art so it swaps when hovering
+   ========================= */
+.header-hover-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#header h1 .hover-text {
+    display: none;
+}
+
+#header h1 .default-text {
+    display: inline;
+}
+
+/* When hovering over the group, swap the text */
+.header-hover-group:hover .default-text {
+    display: none;
+}
+
+.header-hover-group:hover .hover-text {
+    display: inline;
+}
