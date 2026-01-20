@@ -3338,7 +3338,7 @@ input, select, textarea {
     display: inline-block;
     width: 64px;
     height: 64px;
-    background-image: url('images/bino-look-sprite.png');
+    background-image: url('../../images/bino-look-sprite.png');
     background-size: 128px 64px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -3353,3 +3353,4 @@ input, select, textarea {
 .pixel-logo-sprite:hover {
     background-position: -64px 0;
 }
+
