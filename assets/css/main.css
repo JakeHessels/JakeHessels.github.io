@@ -3395,3 +3395,9 @@ input, select, textarea {
 .header-hover-group:hover h1 .hover-text {
     opacity: 1 !important;
 }
+
+/* Fix spacing for main content header */
+#main .inner > header {
+    margin-top: 6em; /* More space */
+    padding-top: 2em; /* Extra padding */
+}
