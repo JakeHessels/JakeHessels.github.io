@@ -3363,31 +3363,34 @@ input, select, textarea {
     gap: 20px;
 }
 
-#header h1 {
-    position: relative; /* Make h1 a positioning context */
+#header .header-hover-group h1 {
+    position: relative;
+    margin: 0; /* Remove default margin */
 }
 
-#header h1 .hover-text,
-#header h1 .default-text {
-    transition: opacity 0.3s ease; /* Smooth fade effect */
+#header .header-hover-group h1 .hover-text,
+#header .header-hover-group h1 .default-text {
+    transition: opacity 0.3s ease;
+    display: block; /* Make sure they're block level */
 }
 
-#header h1 .hover-text {
+#header .header-hover-group h1 .hover-text {
     opacity: 0;
-    position: absolute; /* Position it on top of default text */
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100%; /* Ensure full width */
 }
 
-#header h1 .default-text {
+#header .header-hover-group h1 .default-text {
     opacity: 1;
 }
 
 /* When hovering over the group, swap the text */
-.header-hover-group:hover .default-text {
+.header-hover-group:hover h1 .default-text {
     opacity: 0;
 }
 
-.header-hover-group:hover .hover-text {
+.header-hover-group:hover h1 .hover-text {
     opacity: 1;
 }
