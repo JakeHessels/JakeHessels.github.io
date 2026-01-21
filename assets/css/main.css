@@ -3464,6 +3464,6 @@ input, select, textarea {
 
 /* Fix spacing for main content header */
 #main .inner > header {
-    margin-top: 6em; /* More space */
+    margin-top: 3em; /* More space */
     padding-top: 2em; /* Extra padding */
 }
