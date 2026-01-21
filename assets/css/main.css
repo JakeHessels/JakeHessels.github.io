@@ -3347,11 +3347,6 @@ input, select, textarea {
     image-rendering: crisp-edges;
     
     transition: background-position 0.15s ease;
-
-	/* Fix for mobile */
-	max-width: 100%;
-	height: auto;
-	aspect-ratio: 1/1;
 }
 
 /* Change sprite when hovering anywhere in the group */
