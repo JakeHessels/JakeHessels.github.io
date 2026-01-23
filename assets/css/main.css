@@ -3462,7 +3462,7 @@ input, select, textarea {
 }
 
 /* Fix spacing for main content header */
-#main .inner > header {
-    margin-top: 2em; /* More space */
-    padding-top: 2em; /* Extra padding */
+.header-hover-group {
+    margin-bottom: 3em;    /* Space below logo */
+    padding-bottom: 1em;   /* Optional for hover area */
 }
