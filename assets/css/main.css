@@ -3331,38 +3331,92 @@ input, select, textarea {
 
 
 /* =========================
-   Custom Pixel Art Logo Transition
+   Custom Pixel Art Logo
    ========================= */
 .pixel-logo-sprite {
     display: inline-block;
     width: 64px;
     height: 64px;
-    position: relative; 
-
-.pixel-logo-sprite img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.15s ease; 
-}
-
-.pixel-logo-sprite .hover-svg {
-    opacity: 0;
-}
-
-.pixel-logo-sprite .default-svg {
-    opacity: 1;
+    background-image: url('../../images/bino-look-sprite.png');
+    background-size: 128px 64px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    
+    transition: background-position 0.15s ease;
 }
 
 /* Change sprite when hovering anywhere in the group */
-.header-hover-group:hover .pixel-logo-sprite .default-svg {
-    opacity: 0; 
+.header-hover-group:hover .pixel-logo-sprite {
+    background-position: -64px 0;
 }
 
-.header-hover-group:hover .pixel-logo-sprite .hover-svg {
-    opacity: 1; 
+/* =========================
+   Mobile Scaling for Pixel Art Logo
+   ========================= */
+
+/* Tablet size (980px and below) */
+@media screen and (max-width: 980px) {
+    .pixel-logo-sprite {
+        width: 48px;
+        height: 48px;
+        background-size: 96px 48px;
+    }
+    
+    .header-hover-group:hover .pixel-logo-sprite {
+        background-position: -48px 0;
+    }
+    
+    .header-hover-group {
+        gap: 15px;
+    }
+}
+
+/* Mobile size (736px and below) */
+@media screen and (max-width: 736px) {
+    .pixel-logo-sprite {
+        width: 40px;
+        height: 40px;
+        background-size: 80px 40px;
+    }
+    
+    .header-hover-group:hover .pixel-logo-sprite {
+        background-position: -40px 0;
+    }
+    
+    .header-hover-group {
+        gap: 12px;
+    }
+    
+    .header-hover-group h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Very small mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .pixel-logo-sprite {
+        width: 32px;
+        height: 32px;
+        background-size: 64px 32px;
+    }
+    
+    .header-hover-group:hover .pixel-logo-sprite {
+        background-position: -32px 0;
+    }
+    
+    .header-hover-group {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .header-hover-group h1 {
+        font-size: 1.2em;
+        line-height: 1.3;
+    }
 }
 
 /* =========================
